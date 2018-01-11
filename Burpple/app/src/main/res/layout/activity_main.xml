@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xyz.kaungsithu.burpple.activities.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_food_images"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"/>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="18dp"
+                    android:id="@+id/tv_burpple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="140dp"
+                    android:text="burpple"
+                    android:textColor="@color/black_full"
+                    android:textSize="36sp" />
+
+                <ImageView
+                    android:layout_marginTop="@dimen/margin_top"
+                    android:id="@+id/img_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_burpple"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:src="@drawable/ic_search_black_24dp"/>
+
+
+                <EditText
+                    android:layout_marginTop="@dimen/margin_top"
+                    android:textColorHint="@color/divider"
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_burpple"
+                    android:layout_toEndOf="@id/img_search"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:background="@color/white_full"
+                    android:hint="Search eg.japanses in Myanmar" />
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_burpple"
+                app:layout_collapseMode="pin" />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_intropromotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginTop="@dimen/margin_top"
+                android:text="FEATURED" />
+
+
+            <TextView
+                android:id="@+id/tv_promotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_intropromotion"
+                android:layout_marginBottom="@dimen/margin_bot"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:text="Promotion"
+                android:textSize="@dimen/title_text"
+                android:textColor="@color/black_full"/>
+
+            <TextView
+                android:id="@+id/tv_seemorepro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_promotion"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_left"
+                android:textColor="@color/colorAccent"
+                android:text="see more" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_promotion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_promotion"
+                android:scrollbars="horizontal" />
+
+            <TextView
+                android:id="@+id/tv_introguide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_promotion"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginTop="@dimen/margin_top"
+                android:text="LASTEST" />
+
+            <TextView
+                android:id="@+id/tv_guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_introguide"
+                android:layout_marginBottom="@dimen/margin_bot"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:text="Burpple Guide"
+                android:textSize="@dimen/title_text"
+                android:textColor="@color/black_full"/>
+
+            <TextView
+                android:id="@+id/tv_seemoreguide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_guide"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_left"
+                android:textColor="@color/colorAccent"
+                android:text="see more" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_guide"
+                android:scrollbars="horizontal" />
+
+            <TextView
+                android:id="@+id/tv_intronews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_guide"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginTop="@dimen/margin_top"
+                android:text="LASTEST" />
+
+            <TextView
+                android:id="@+id/tv_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_intronews"
+                android:layout_marginBottom="@dimen/margin_bot"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:text="News and Trending"
+                android:textSize="@dimen/title_text"
+                android:textColor="@color/black_full"/>
+
+            <TextView
+                android:id="@+id/tv_seemorenews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_news"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_left"
+                android:textColor="@color/colorAccent"
+                android:text="see more" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_news"
+                android:layout_marginBottom="@dimen/margin_bot"
+                android:scrollbars="horizontal" />
+            <View
+                android:id="@+id/view_location"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rv_news"
+                android:background="@android:color/black"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:id="@+id/icon_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_location"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:src="@drawable/ic_location_on_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_exp_neigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_location"
+                android:layout_marginBottom="@dimen/margin_bot"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_toRightOf="@id/icon_location"
+                android:text="Explore Neighbourhoods"
+                android:textSize="20sp" />
+            <View
+                android:id="@+id/view_cap"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_exp_neigh"
+                android:background="@android:color/black"
+                android:layout_marginBottom="20dp"/>
+
+            <ImageView
+                android:id="@+id/icon_food"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_exp_cat"
+                android:layout_toStartOf="@+id/tv_exp_neigh"
+                android:src="@drawable/ic_local_dining_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_exp_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_cap"
+                android:layout_marginBottom="@dimen/margin_bot"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_toRightOf="@id/icon_food"
+                android:text="Explore Categories"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="invisible"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</android.support.design.widget.CoordinatorLayout>

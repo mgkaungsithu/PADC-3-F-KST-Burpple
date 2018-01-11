@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="colorAccent">#D84315</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="accent">#2196F3</color>
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+
+    <color name="icon_fullscreen_bg">#33000000</color>
+    <color name="rating">#f9e217</color>
+    <color name="white_full">#FFFFFF</color>
+    <color name="black_full">#000000</color>
+
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+
+
+</resources>
