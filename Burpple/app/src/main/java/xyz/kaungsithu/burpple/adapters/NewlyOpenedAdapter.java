@@ -7,20 +7,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import xyz.kaungsithu.burpple.R;
-import xyz.kaungsithu.burpple.viewholders.guideViewHolder;
+import xyz.kaungsithu.burpple.viewholders.ItemsNewlyOpened;
 
 /**
- * Created by User on 1/6/2018.
+ * Created by User on 1/4/2018.
  */
 
-public class guideAdapter extends RecyclerView.Adapter{
+public class NewlyOpenedAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View guideItemview = layoutInflater.inflate(R.layout.activity_guide,parent,false);
-        guideViewHolder guideViewHolder = new guideViewHolder(guideItemview);
-        return guideViewHolder;
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View newlyOpened = inflater.inflate(R.layout.item_newly_opened, parent, false);
+        ItemsNewlyOpened itemsNewlyOpened = new ItemsNewlyOpened(newlyOpened);
+        return itemsNewlyOpened;
     }
 
     @Override
@@ -30,6 +30,6 @@ public class guideAdapter extends RecyclerView.Adapter{
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 1;
     }
 }

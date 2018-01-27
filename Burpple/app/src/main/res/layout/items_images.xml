@@ -4,10 +4,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
-        android:id="@+id/iv_news_details_image"
+        android:id="@+id/iv_food_backdrop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/testcard"
+        android:scaleType="fitXY"
+        android:alpha="0.5"
+        android:background="@color/black_full"
         />
+
+    <TextView
+        android:id="@+id/tv_highlight_features"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FEATURES"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:textColor="@color/white_text"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_highlight_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A Tasty Walk In A Park"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:textColor="@color/white_text"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tv_highlight_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Food"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:textColor="@color/white_text"
+        android:textSize="10sp"/>
+
 
 </xyz.kaungsithu.burpple.viewitems.ImagesViewItem>

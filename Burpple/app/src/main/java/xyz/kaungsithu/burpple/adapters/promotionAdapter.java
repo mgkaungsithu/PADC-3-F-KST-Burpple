@@ -6,30 +6,48 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import xyz.kaungsithu.burpple.R;
-import xyz.kaungsithu.burpple.viewholders.promotionViewHolder;
+import xyz.kaungsithu.burpple.data.vo.PromotionVO;
+import xyz.kaungsithu.burpple.viewholders.ItemsFoodPromotion;
 
 /**
  * Created by User on 1/6/2018.
  */
 
-public class promotionAdapter extends RecyclerView.Adapter{
+public class PromotionAdapter extends RecyclerView.Adapter<ItemsFoodPromotion> {
+
+
+    private List<PromotionVO> mPromotionList;
+
+    public PromotionAdapter() {
+        mPromotionList = new ArrayList<>();
+    }
+
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ItemsFoodPromotion onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View promotionItemview = layoutInflater.inflate(R.layout.activity_promotion,parent,false);
-        promotionViewHolder itemPromotionViewHolder = new promotionViewHolder(promotionItemview);
-        return itemPromotionViewHolder;
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View foodItemsView = inflater.inflate(R.layout.activity_promotion, parent, false);
+        ItemsFoodPromotion itemsFoodPromotion = new ItemsFoodPromotion(foodItemsView);
+        return itemsFoodPromotion;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
+    public void onBindViewHolder(ItemsFoodPromotion holder, int position) {
+        holder.setPromotion(mPromotionList.get(position));
     }
+
 
     @Override
     public int getItemCount() {
-        return 3;
+        return mPromotionList.size();
+    }
+
+    public void setPromotion(List<PromotionVO> promotionList) {
+        mPromotionList = promotionList;
+        notifyDataSetChanged();
     }
 }

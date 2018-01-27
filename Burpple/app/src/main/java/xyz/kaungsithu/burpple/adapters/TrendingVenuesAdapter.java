@@ -7,21 +7,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import xyz.kaungsithu.burpple.R;
-import xyz.kaungsithu.burpple.viewholders.newsViewHolder;
-import xyz.kaungsithu.burpple.viewholders.promotionViewHolder;
+import xyz.kaungsithu.burpple.viewholders.ItemsTrendingVenues;
 
 /**
- * Created by User on 1/6/2018.
+ * Created by User on 1/7/2018.
  */
 
-public class newsAdapter extends RecyclerView.Adapter{
+public class TrendingVenuesAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View promotionItemview = layoutInflater.inflate(R.layout.activity_news,parent,false);
-        newsViewHolder itemTrailersViewHolder = new newsViewHolder(promotionItemview);
-        return itemTrailersViewHolder;
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View trendingVenues = inflater.inflate(R.layout.item_trending_venues, parent, false);
+        ItemsTrendingVenues itemsTrendingVenues = new ItemsTrendingVenues(trendingVenues);
+        return itemsTrendingVenues;
     }
 
     @Override
@@ -31,6 +30,6 @@ public class newsAdapter extends RecyclerView.Adapter{
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 1;
     }
 }
